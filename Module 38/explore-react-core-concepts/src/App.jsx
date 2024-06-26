@@ -13,8 +13,8 @@ function App() {
       <Device name="mobile" price="12"></Device>
       <Person></Person>
       <Student name="tahsin" age="22"></Student>
-      <Student name="niloy" age="21"></Student>
-      <Developer name="ferdous" age="22"></Developer>
+      <Student ></Student>
+      <Developer name="ferdous" age={22}></Developer>
       <Developer name="segmentation fault" age="99+"></Developer>
     </>
   )
@@ -32,12 +32,12 @@ function Person () {
   return <h3>I am a {person.name} with age {age}</h3>
 }
 
-function Student (props) {
+function Student ({name="N/A", age=10}) {
   return (
     <div className='student'>
       <h3>I am a student</h3>
-      <p>Name: {props.name}</p>
-      <p>Age: {props.age}</p>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
     </div>
   )
 }
