@@ -9,12 +9,20 @@ function App() {
     <>
       
       <h1>Vite + React</h1>
+      <Device name="laptop" price="55"></Device>
+      <Device name="mobile" price="12"></Device>
       <Person></Person>
-      <Student></Student>
+      <Student name="tahsin" age="22"></Student>
+      <Student name="niloy" age="21"></Student>
+      <Developer name="ferdous" age="22"></Developer>
+      <Developer name="segmentation fault" age="99+"></Developer>
     </>
   )
 }
 
+function Device (props) {
+  return <h2>This is a device: {props.name} price: {props.price}</h2>
+}
 function Person () {
   const age = 22;
   const person = {
@@ -24,12 +32,28 @@ function Person () {
   return <h3>I am a {person.name} with age {age}</h3>
 }
 
-function Student () {
+function Student (props) {
   return (
-    <div>
+    <div className='student'>
       <h3>I am a student</h3>
-      <p>Name: Tahsin</p>
-      <p>Age: 12</p>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
+    </div>
+  )
+}
+
+function Developer (props) {
+  const developerStyle = {
+    margin: '20px',
+    padding: '20px',
+    border: '1px solid yellow',
+    borderRadius: '10px',
+  }
+  return (
+    <div style={developerStyle}>
+      <h3>I am a developer</h3>
+      <p>Name: {props.name}</p>
+      <p>Age: {props.age}</p>
     </div>
   )
 }
