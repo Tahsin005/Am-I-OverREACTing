@@ -21,7 +21,7 @@ function App () {
 
       {
         singers.map(singer => <Singer singer={singer}></Singer>)
-      }
+      } 
       <Actor name="batman"></Actor>
       {
         actors.map(actor => <Actor name={actor}></Actor>)
