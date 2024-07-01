@@ -1,4 +1,5 @@
 export default function Friend({friend}) {
+    // console.log(friend);
     const friendStyle = {
         margin: '20px',
         padding: '10px',
