@@ -1,0 +1,42 @@
+[
+    {
+        "watchId": 501,
+        "brand": "Apple",
+        "model": "Apple Watch Series 8",
+        "price": 399,
+        "features": ["GPS", "Heart Rate Monitor", "Water Resistant"],
+        "releaseDate": "2023-09-12"
+    },
+    {
+        "watchId": 502,
+        "brand": "Samsung",
+        "model": "Galaxy Watch 5",
+        "price": 299,
+        "features": ["Sleep Tracking", "ECG", "GPS"],
+        "releaseDate": "2023-08-30"
+    },
+    {
+        "watchId": 503,
+        "brand": "Fitbit",
+        "model": "Fitbit Sense 2",
+        "price": 229,
+        "features": ["Stress Management", "Skin Temperature Sensor", "Heart Rate Monitor"],
+        "releaseDate": "2023-07-15"
+    },
+    {
+        "watchId": 504,
+        "brand": "Garmin",
+        "model": "Garmin Forerunner 955",
+        "price": 499,
+        "features": ["GPS", "Music Storage", "Performance Metrics"],
+        "releaseDate": "2023-06-10"
+    },
+    {
+        "watchId": 505,
+        "brand": "Amazfit",
+        "model": "Amazfit GTR 3 Pro",
+        "price": 199,
+        "features": ["Blood Oxygen Monitoring", "Alexa Built-in", "GPS"],
+        "releaseDate": "2023-05-20"
+    }
+]

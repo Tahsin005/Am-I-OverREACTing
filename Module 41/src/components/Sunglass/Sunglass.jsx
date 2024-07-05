@@ -14,7 +14,6 @@ const Sunglass = () => {
             <h1>Add: {sum}</h1>
             <h2>Product: {product}</h2>
             <h4>Divide: {vaag}</h4>
-            <Watch></Watch>
         </div>
     );
 };
