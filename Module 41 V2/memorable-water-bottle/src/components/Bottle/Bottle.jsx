@@ -1,6 +1,6 @@
-
+import PropTypes from 'prop-types';
 const Bottle = ({bottle, handleAddToCart}) => {
-    const {id, category, name, seller, price, stock, ratings, ratingsCount, img, shipping, quantity} = bottle;
+    const {id, name, price, stock, ratings, img} = bottle;
     const bottleStyle = {
         border: "5px solid purple",
         margin: "10px",
@@ -27,6 +27,7 @@ const Bottle = ({bottle, handleAddToCart}) => {
     }
     return (
         <div style={bottleStyle}>
+            <p style={generalStyle}>{id}</p>
             <p style={generalStyle}>{name}</p>
             <p style={generalStyle}>Stock: {stock? "Available": "Not Abvailale"}</p>
             <p style={generalStyle}>Ratings: {ratings}⭐</p>
@@ -39,5 +40,8 @@ const Bottle = ({bottle, handleAddToCart}) => {
         </div>
     );
 };
-
+Bottle.propTypes = {
+    bottle: PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func.isRequired,
+}
 export default Bottle;

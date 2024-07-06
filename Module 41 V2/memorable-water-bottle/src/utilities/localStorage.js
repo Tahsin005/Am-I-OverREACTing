@@ -15,5 +15,9 @@ const addToLS = (bottle)  => {
     cart.push(bottle);
     setStoredCart(cart);
 }
-
-export { addToLS, setStoredCart, getStoredCart };
+const removeFromLS = (id) => {
+    const cart = getStoredCart();
+    const updatedCart = cart.filter((idx) => idx !== id);
+    setStoredCart(updatedCart);
+}
+export { addToLS, setStoredCart, getStoredCart, removeFromLS };
