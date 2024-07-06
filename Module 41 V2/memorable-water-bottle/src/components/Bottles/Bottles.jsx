@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Bottle from "../Bottle/Bottle";
 import './Bottles.css'
+import { addToLS, getStoredCart } from "../../utilities/localStorage";
+import Cart from "../Cart/Cart";
 
 const Bottles = () => {
     const [bottles, setBottles] = useState([]); 
@@ -12,6 +14,25 @@ const Bottles = () => {
         .then(response => response.json())
         .then(data => setBottles(data))
     }, []);
+
+    useEffect(() => {
+        console.log("object", bottles.length);
+        if (bottles.length) {
+            const storedCart = getStoredCart();
+            console.log(storedCart);
+
+            const savedCard = [];
+            for (const id of storedCart) {
+                const bottle = bottles.find(bottle => bottle.id === id);
+                if (bottle) savedCard.push(bottle);
+            }
+
+            setCart(savedCard);
+            console.log("savedCard", savedCard);
+            console.log("cart", cart);
+        }
+    }, [bottles]);
+
     const bottleStyle = {
         display: "inline-grid",
         gridColumnStart: 3,
@@ -21,6 +42,7 @@ const Bottles = () => {
     const handleAddToCart = (bottle) => {
         setCart([...cart, bottle]);
         console.log(`Added ${bottle.name} to cart`, cart);
+        addToLS(bottle.id);
     }
     return (
         <>
@@ -28,7 +50,7 @@ const Bottles = () => {
                 <h2>Bottles: {bottles.length}</h2>
             </div>
             <div>
-                <h2>Cart: {cart.length}</h2>
+                <Cart cart={cart}></Cart>
             </div>
             <div className="grid-container" style={bottleStyle}>
                 { bottles.map((bottle, index) => (
