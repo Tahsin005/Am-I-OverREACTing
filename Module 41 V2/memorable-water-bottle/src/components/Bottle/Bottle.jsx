@@ -1,5 +1,5 @@
 
-const Bottle = ({bottle}) => {
+const Bottle = ({bottle, handleAddToCart}) => {
     const {id, category, name, seller, price, stock, ratings, ratingsCount, img, shipping, quantity} = bottle;
     const bottleStyle = {
         border: "5px solid purple",
@@ -27,19 +27,15 @@ const Bottle = ({bottle}) => {
     }
     return (
         <div style={bottleStyle}>
-            <p>{id}</p>
-            <p style={generalStyle}>Category: {category}</p>
-            <p style={generalStyle}>Name: {name}</p>
-            <p style={generalStyle}>Seller: {seller}</p>
-            <p style={generalStyle}>Stock: {stock}</p>
+            <p style={generalStyle}>{name}</p>
+            <p style={generalStyle}>Stock: {stock? "Available": "Not Abvailale"}</p>
             <p style={generalStyle}>Ratings: {ratings}⭐</p>
-            <p style={generalStyle}>Ratings Count: {ratingsCount}</p>
             <img style={imgStyle} src={img} alt="" />
             <div style={{display: "flex", gap: "10px", justifyContent: "center", backgroundColor: "purple", borderRadius: "10px"}}>
                 <p>Price: ${price}</p>
-                <p>Shipping: {shipping}</p>
-                <p>Quantity: {quantity}</p>
             </div>
+            <br />
+            <button onClick={() => handleAddToCart(bottle)}>Purchase</button>
         </div>
     );
 };
