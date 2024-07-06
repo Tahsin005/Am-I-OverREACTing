@@ -16,4 +16,4 @@ const addToLS = (bottle)  => {
     setStoredCart(cart);
 }
 
-export { addToLS };
+export { addToLS, setStoredCart, getStoredCart };
