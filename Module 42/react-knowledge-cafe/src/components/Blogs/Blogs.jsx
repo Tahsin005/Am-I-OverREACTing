@@ -4,7 +4,7 @@ import Blog from "../Blog/Blog";
 import PropTypes from 'prop-types';
 // import Blog from './../Blog/Blog';
 
-const Blogs = ({handleAddToBookmark}) => {
+const Blogs = ({handleAddToBookmark, handleTimeOnRead}) => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
@@ -16,7 +16,9 @@ const Blogs = ({handleAddToBookmark}) => {
         <div className="md:w-2/3">
             {
                 blogs.map(blog => (
-                    <Blog key={blog.id} blog={blog} handleAddToBookmark={handleAddToBookmark}></Blog>
+                    <Blog key={blog.id} blog={blog} handleAddToBookmark={handleAddToBookmark} 
+                    handleTimeOnRead={handleTimeOnRead}
+                    ></Blog>
                 ))
             }
         </div>
@@ -24,5 +26,6 @@ const Blogs = ({handleAddToBookmark}) => {
 };
 Blogs.propTypes = {
     handleAddToBookmark: PropTypes.func.isRequired,
+    handleTimeOnRead: PropTypes.func.isRequired,
 }
 export default Blogs;
