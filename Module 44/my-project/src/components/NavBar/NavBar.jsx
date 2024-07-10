@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "../Link/Link";
 import { FaHamburger } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 const NavBar = () => {
     const [open, setOpen] = useState(false);
     const routes = [
@@ -14,9 +15,8 @@ const NavBar = () => {
         <nav>
             <div className="md:hidden" onClick={() => setOpen(!open)}>
                 {
-                    open === true ? 'open' : 'close'
+                    open === true ? <IoClose className="text-2xl"></IoClose> : <FaHamburger className="text-2xl"></FaHamburger>
                 }
-                <FaHamburger className="text-2xl"></FaHamburger>
             </div>
             <ul className="md:flex">
                 {
