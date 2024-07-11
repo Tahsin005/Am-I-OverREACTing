@@ -35,7 +35,7 @@ function App() {
     if (savedTime) {
       setReadingTime(savedTime);
     }
-  }, [bookmarks, ]);
+  }, [bookmarks]);
   return (
     <>
       <Header></Header>
