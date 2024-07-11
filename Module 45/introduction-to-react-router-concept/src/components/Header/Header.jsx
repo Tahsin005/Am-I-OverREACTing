@@ -7,6 +7,7 @@ const Header = () => {
                 <a className="text-3xl hover:bg-slate-400" href="/">Home</a>
                 <a className="text-3xl hover:bg-slate-400" href="/about">About</a>
                 <a className="text-3xl hover:bg-slate-400" href="/contact">Contact</a>
+                
             </div>            
         </div>
     );
