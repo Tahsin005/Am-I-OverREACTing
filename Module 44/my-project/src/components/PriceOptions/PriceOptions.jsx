@@ -41,13 +41,17 @@ const PriceOptions = () => {
         }
     ];
     return (
-        <div>
-            {
-                priceOptions.map((option, index) => (
-                    <PriceOption key={index} option={option}></PriceOption>
-                ))
-            }
-        </div>
+        <>
+             <div className="font-bold text-center text-7xl my-6">Pricing Options</div>
+             <div className="grid md:grid-cols-3 m-12 gap-4">
+                {
+                    priceOptions.map((option, index) => (
+                        <PriceOption key={index} option={option}></PriceOption>
+                    ))
+                }
+            </div>
+        </>
+       
     );
 };
 

@@ -18,7 +18,7 @@ const NavBar = () => {
                     open === true ? <IoClose className="text-2xl hover:bg-slate-300 rounded-md"></IoClose> : <FaHamburger className="text-2xl"></FaHamburger>
                 }
             </div>
-            <ul className={`md:flex px-6 ${open ? 'top-16': '-top-60'} py-2 duration-1000 absolute sm:shadow-xl md:shadow-none rounded-xl md:top-4`}>
+            <ul className={`md:flex px-6 ${open ? 'top-16': '-top-60'} py-2 duration-1000 absolute sm:shadow-xl md:shadow-none rounded-xl md:top-4 bg-white`}>
                 {
                     routes.map((route) => 
                         <Link key={route.id} route={route}></Link>
