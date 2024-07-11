@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import Feature from '../components/Feature/Feature';
+import Feature from '../Feature/Feature';
 const PriceOption = ({option}) => {
     const {id, name, features, price} = option;
     return (
-        <div key={id} className='bg-blue-700 text-white p-6 rounded-xl flex flex-col'>
+        <div key={id} className='bg-blue-700 text-white p-6 rounded-xl flex flex-col hover:scale-105 duration-300'>
             <h2 className="text-center">
                 <span className="text-7xl font-extrabold">{price}</span>
                 <span className='text-2xl'>/month</span>
