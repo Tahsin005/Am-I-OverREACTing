@@ -10,7 +10,13 @@ import Home from './components/Home/Home.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home>
+    element: <Home></Home>,
+    children: [
+      {
+        path: '/details',
+        element: <h1>Details Page</h1>
+      }
+    ]
   }
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
