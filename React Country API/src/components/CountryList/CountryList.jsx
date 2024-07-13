@@ -12,9 +12,12 @@ const CountryList = ({query}) => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 my-12">
             {
+                countries ? 
                 countries.filter((country) => country.name.common.toLowerCase().includes(query) || country.region.toLowerCase().includes(query)).map((country) => (
                     <CountryCard key={country.name.common} country={country}></CountryCard>
-                ))
+                )) 
+                : 
+                <div>nai</div>
             }
         </div>
     );

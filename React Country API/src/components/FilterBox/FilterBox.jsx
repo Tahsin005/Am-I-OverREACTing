@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 const FilterBox = ({ setQuery }) => {
   return (
     <div className="w-64 border-2 rounded-lg">
@@ -11,6 +12,10 @@ const FilterBox = ({ setQuery }) => {
       </select>
     </div>
   );
+};
+
+FilterBox.propTypes = {
+  setQuery: PropTypes.func.isRequired,
 };
 
 export default FilterBox;

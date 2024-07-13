@@ -7,15 +7,22 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home.jsx';
 import App from './App.jsx';
+import CountryDetails from './components/CountryDetails/CountryDetails.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/country/:countryName',
+        element: <CountryDetails></CountryDetails>
       }
     ]
   }

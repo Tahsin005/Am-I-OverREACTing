@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 const CountryCard = ({ country }) => {
   return (
-    <div className="inline-block rounded-lg overflow-hidden pb-6 shadow-[0_0_8px_0_rgba(0,0,0,0.2)] transition-all duration-200 ease-in-out bg-[var(--elements-color)]">
+    <Link state={country} to={`/country/${country.name.common}`} className="inline-block rounded-lg overflow-hidden pb-6 shadow-[0_0_8px_0_rgba(0,0,0,0.2)] transition-all duration-200 hover:scale-105">
       <div className='h-[160px] overflow-hidden'>
         <img className="border-b-2 w-full h-full object-cover" src={country.flags.svg} alt="" />
       </div>
@@ -17,7 +18,7 @@ const CountryCard = ({ country }) => {
             <strong>Capital:</strong> {country.capital?.[0]}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 CountryCard.propTypes = {

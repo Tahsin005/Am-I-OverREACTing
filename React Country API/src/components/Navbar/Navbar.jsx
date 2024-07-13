@@ -10,7 +10,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex"></div>
         <div className="navbar-end">
-          <a className="btn">Theme</a>  
+          🏴
         </div>
       </div>
     </div>
