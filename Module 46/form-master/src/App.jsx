@@ -20,8 +20,16 @@ function App() {
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={'SignUp From'} handleSubmit={handleSignUP} submitBtnTxt='Submit'></ReusableForm>
-      <ReusableForm formTitle={'Update From'} handleSubmit={handleUpdate} submitBtnTxt='Update'></ReusableForm>
+      <ReusableForm formTitle={'SignUp From'} handleSubmit={handleSignUP} submitBtnTxt='Submit'>
+        <div>
+          <h2>Sign Up RN</h2>
+        </div>
+      </ReusableForm>
+      <ReusableForm formTitle={'Update From'} handleSubmit={handleUpdate} submitBtnTxt='Update'>
+        <div>
+          <h2>Update RN</h2>
+        </div>
+      </ReusableForm>
     </>
   )
 }
