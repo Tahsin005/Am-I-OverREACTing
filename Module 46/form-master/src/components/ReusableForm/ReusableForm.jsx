@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 const ReusableForm = ({formTitle, handleSubmit, submitBtnTxt="Submit", children}) => {
     const handleLocalSubmit = e => {
         e.preventDefault();
@@ -26,4 +26,12 @@ const ReusableForm = ({formTitle, handleSubmit, submitBtnTxt="Submit", children}
     );
 };
 
+ReusableForm.propTypes = {
+    formTitle: PropTypes.string,
+    handleLocalSubmit: PropTypes.func,
+    handleSubmit: PropTypes.func,
+    submitBtnTxt: PropTypes.string,
+    children: PropTypes.arrayOf(PropTypes.func),
+
+}
 export default ReusableForm;
